@@ -16,5 +16,22 @@
   "bugs": {
     "url": "https://github.com/Queonias/notes/issues"
   },
-  "homepage": "https://github.com/Queonias/notes#readme"
+  "homepage": "https://github.com/Queonias/notes#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.7",
+    "express-session": "^1.17.3",
+    "method-override": "^3.0.0",
+    "mongoose": "^7.3.1",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.3.1",
+    "handlebars": "^4.7.7",
+    "nodemon": "^2.0.22",
+    "npm-check-updates": "^16.10.13"
+  }
 }
