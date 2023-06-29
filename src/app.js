@@ -1,4 +1,5 @@
 const express = require('express');
+const morgan = require('morgan');
 const path = require('path');
 require('dotenv').config();
 const exphbs = require('express-handlebars');
@@ -24,6 +25,8 @@ const hbs = exphbs.create({
   app.set("view engine", ".hbs");
 
 // Middlewares
+app.use(morgan('dev'));
+
 // Adiciona o middleware para analisar os dados do corpo da solicitação com o formato de codificação x-www-form-urlencoded
 app.use(express.urlencoded({ extended: false }));
 
