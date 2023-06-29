@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const path = require('path');
 require('dotenv').config();
 const exphbs = require('express-handlebars');
+const methodOverride = require('method-override');
 
 // Initializations
 const app = express();
@@ -26,6 +27,7 @@ const hbs = exphbs.create({
 
 // Middlewares
 app.use(morgan('dev'));
+app.use(methodOverride('_method'))
 
 // Adiciona o middleware para analisar os dados do corpo da solicitação com o formato de codificação x-www-form-urlencoded
 app.use(express.urlencoded({ extended: false }));
