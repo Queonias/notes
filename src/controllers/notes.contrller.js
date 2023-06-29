@@ -1,28 +1,32 @@
+const Notes = require('../models/Note');
 const notesCtrl = {}
 
 notesCtrl.renderNoteForm = (_req, res) => {
-    res.render('notes/new-note')   
+    res.render('notes/new-note');   
 }
 
-notesCtrl.createNewNote = (req, res) => {
-    console.log(req.body)
+notesCtrl.createNewNote = async (req, res) => {
+    const { title, description} = req.body;
+    const newNote = new Notes({ title, description })
+    await newNote.save();
     res.send('new note')   
 }
 
-notesCtrl.renderNotes = (_req, res) => {
-    res.send('render notes')   
+notesCtrl.renderNotes = async (_req, res) => {
+    const notes = await Notes.find();
+    res.render('notes/all-notes', { notes }); 
 }
 
 notesCtrl.renderEditForm = (_req, res) => {
-    res.send('render edit form')   
+    res.send('render edit form');   
 }
 
 notesCtrl.updateNote = (_req, res) => {
-    res.send('update note')   
+    res.send('update note');   
 }
 
 notesCtrl.deleteNote = (_req, res) => {
-    res.send('deleting note')   
+    res.send('deleting note');   
 }
 
 module.exports = notesCtrl;

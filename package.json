@@ -23,7 +23,7 @@
     "bcryptjs": "^2.4.3",
     "connect-flash": "^0.1.1",
     "express": "^4.18.2",
-    "express-handlebars": "^7.0.7",
+    "express-handlebars": "^3.1.0",
     "express-session": "^1.17.3",
     "method-override": "^3.0.0",
     "mongoose": "^7.3.1",
@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "dotenv": "^16.3.1",
-    "handlebars": "^4.7.7",
+    "handlebars": "^4.5.0",
     "nodemon": "^2.0.22",
     "npm-check-updates": "^16.10.13"
   }
