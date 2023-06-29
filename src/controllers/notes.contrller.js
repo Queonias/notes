@@ -1,7 +1,7 @@
 const notesCtrl = {}
 
 notesCtrl.renderNoteForm = (_req, res) => {
-    res.send('note add')   
+    res.render('new-note')   
 }
 
 notesCtrl.createNewNote = (_req, res) => {
