@@ -29,9 +29,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // Routes
 // Rota raiz que renderiza a visualização "index"
-app.get('/', (_req, res) => {
-    res.render('index')
-});
+app.use(require('./routes/index.routes'));
 
 // Static files
 // Define o diretório 'public' como o diretório de arquivos estáticos
