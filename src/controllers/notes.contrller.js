@@ -17,16 +17,18 @@ notesCtrl.renderNotes = async (_req, res) => {
     res.render('notes/all-notes', { notes }); 
 }
 
-notesCtrl.renderEditForm = (_req, res) => {
-    res.send('render edit form');   
+notesCtrl.renderEditForm = async (req, res) => {
+    const note = await Notes.findById(req.params.id);
+    res.render('notes/edit-note', { note });    
 }
 
-notesCtrl.updateNote = (_req, res) => {
-    res.send('update note');   
+notesCtrl.updateNote = async (req, res) => {
+    const { title, description } = req.body;
+    await Notes.findByIdAndUpdate(req.params.id, { title, description });
+    res.redirect('/notes');   
 }
 
 notesCtrl.deleteNote = async (req, res) => {
-    console.log(req.params.id);
     await Notes.findByIdAndDelete(req.params.id);
     res.redirect('/notes'); 
 }
