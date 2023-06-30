@@ -50,6 +50,7 @@ app.use((req, res, next) => {
 // Rota raiz que renderiza a visualização "index"
 app.use(require('./routes/index.routes'));
 app.use(require('./routes/notes.routes'));
+app.use(require('./routes/users.routes'));
 
 // Static files
 // Define o diretório 'public' como o diretório de arquivos estáticos
