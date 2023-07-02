@@ -1,6 +1,8 @@
 const app = require('./src/app');
 require('./src/database')
+const port = process.env.PORT || 5000;
 
-app.listen(app.get('port'), () => {
-    console.log('Server listening on', app.get('port'));
-});
+// Initialize server
+app.listen(port, () => {
+    console.log("Running on port 5000.");
+  });
