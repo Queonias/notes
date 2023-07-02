@@ -9,6 +9,10 @@ const NoteSchema = new Schema({
         type: String,
         required: true
     },
+    user : {
+        type: String,
+        required: true
+    }
 }, {
     timestamps: true
 });

@@ -9,18 +9,23 @@ notesCtrl.renderNoteForm = (_req, res) => {
 notesCtrl.createNewNote = async (req, res) => {
     const { title, description} = req.body;
     const newNote = new Notes({ title, description });
+    newNote.user = req.user.id;
     await newNote.save();
     req.flash("success_msg", "Note Added Successfully");
     res.redirect('/notes');    
 }
 
-notesCtrl.renderNotes = async (_req, res) => {
-    const notes = await Notes.find();
+notesCtrl.renderNotes = async (req, res) => {
+    const notes = await Notes.find({ user: req.user.id }).sort({createdAt: 'desc'});
     res.render('notes/all-notes', { notes }); 
 }
 
 notesCtrl.renderEditForm = async (req, res) => {
     const note = await Notes.findById(req.params.id);
+    if (note.user != req.user.id) {
+        req.flash("error_msg", "Not Authorized");
+        return res.redirect('/notes');
+    }
     res.render('notes/edit-note', { note });    
 }
 
