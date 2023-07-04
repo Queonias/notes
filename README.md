@@ -122,7 +122,7 @@
   <p>Este projeto está licenciado sob a Licença ISC. Consulte o arquivo LICENSE para obter mais detalhes.</p>
 
   <h2>Contato</h2>
-  <p>Para mais informações, você pode me contatar pelo e-mail: <a href="mailto:queones@gmail.com">seu-email@example.com</a>.</p>
+  <p>Para mais informações, você pode me contatar pelo e-mail: <a href="mailto:queones@gmail.com">queones@gmail.com</a>.</p>
 
   <p>Repositório do projeto: <a href="https://github.com/Queonias/notes">https://github.com/Queonias/notes</a></p>
 </body>
