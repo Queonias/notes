@@ -115,6 +115,18 @@
     <li>Express-session</li>
   </ul>
 
+<h2>Demonstração</h2>
+  <p>
+    Uma demonstração do aplicativo NodeApp pode ser acessada no seguinte link: 
+    <a href="https://notes-app-zeta-tawny.vercel.app/users/signup">https://notes-app-zeta-tawny.vercel.app/users/signup</a>
+  </p>
+  <p>
+    Nesta demonstração, você pode explorar as funcionalidades do aplicativo, criar uma conta de usuário, adicionar, editar e excluir notas, além de experimentar a autenticação de usuário.
+  </p>
+  <p>
+    Por favor, note que esta é apenas uma demonstração e algumas funcionalidades podem estar limitadas ou desabilitadas. Para obter a versão completa do aplicativo, recomendamos configurá-lo e executá-lo localmente, conforme descrito nas instruções de configuração e execução no README do projeto.
+  </p>
+
   <h2>Contribuição</h2>
   <p>Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests no repositório do projeto.</p>
 
