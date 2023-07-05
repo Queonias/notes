@@ -102,6 +102,30 @@
   </ol>
   <pre><code>npm start</code></pre>
 
+  <h2>Configuração do MongoDB Local</h2>
+  <p>
+    Para configurar o MongoDB localmente para uso com o aplicativo NodeApp, siga as etapas abaixo:
+  </p>
+  <ol>
+    <li>Baixe e instale o MongoDB em sua máquina, seguindo as instruções do site oficial do MongoDB.</li>
+    <li>Inicie o servidor MongoDB executando o comando <code>mongod</code> no terminal.</li>
+    <li>No diretório raiz do projeto NodeApp, crie um arquivo chamado <code>.env</code>.</li>
+    <li>Abra o arquivo <code>.env</code> e adicione as seguintes linhas:</li>
+  </ol>
+  <pre>
+    <code>
+      MONGODB_URI=mongodb://localhost:27017/notes
+      PORT=3000
+    </code>
+  </pre>
+  <p>
+    Certifique-se de que o valor do <code>DB_CONNECTION_STRING</code> corresponda à configuração correta do seu ambiente local.
+  </p>
+  <p>
+    Com o MongoDB configurado localmente, você poderá executar o aplicativo NodeApp e utilizar o banco de dados local para armazenar suas notas e dados de usuário.
+  </p>
+
+
   <p>O NodeApp estará em execução no endereço: <a href="http://localhost:3000">http://localhost:3000</a></p>
 
   <h2>Tecnologias Utilizadas</h2>
