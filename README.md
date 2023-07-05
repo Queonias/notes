@@ -119,7 +119,7 @@
     </code>
   </pre>
   <p>
-    Certifique-se de que o valor do <code>DB_CONNECTION_STRING</code> corresponda à configuração correta do seu ambiente local.
+    Certifique-se de que o valor do <code>MONGODB_URI</code> corresponda à configuração correta do seu ambiente local.
   </p>
   <p>
     Com o MongoDB configurado localmente, você poderá executar o aplicativo NodeApp e utilizar o banco de dados local para armazenar suas notas e dados de usuário.
